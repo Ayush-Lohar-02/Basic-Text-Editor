@@ -1,0 +1,114 @@
+.tabs {
+  background: @faded;
+  padding: 2px 2px 0 0;
+  display: flex;
+  justify-content: flex-start;
+  //box-shadow: inset 4px 4px 16px rgba(0, 0, 0, .3);
+
+  .tab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    min-width: 0px;
+    // margin-right: 3px;
+    opacity: .5;
+    background: @background;
+    border-bottom: 4px solid darken(@background, 10%);
+    color: @foreground;
+    padding: 0 12px;
+    flex: 1 1 0px;
+    position: relative;
+    
+    a {
+      text-decoration: none;
+      color: @foreground;
+      padding: 6px 0;
+      width: 100%;
+      flex: 1;
+      
+      &:focus {
+        outline: none;
+        border: none;
+      }
+    }
+    
+    transition: max-width .5s linear, -webkit-transform .2s ease, border-width .2s ease, opacity .2s ease;
+    transition: max-width .5s linear, transform .2s ease, border-width .2s ease, opacity .2s ease;
+    
+    &.active {
+      padding-bottom: 0px;
+      border-bottom: 4px solid @accent;
+      color: @foreground;
+      opacity: 1;
+      z-index: 9;
+      font-weight: bold;
+      
+      .close {
+        color: @accent;
+      }
+    }
+    
+    &:hover:not(.active) {
+      opacity: .8;
+    }
+    
+    &.dragging {
+      width: 0;
+      padding: 0;
+      flex-grow: 0;
+    }
+    
+    &.hovering {
+      border-left-color: @faded;
+      border-left-width: 25px;
+      border-left-style: solid;
+    }
+    
+    &.enter {
+      //max-width: 0px;
+      -webkit-transform: translateY(24px);
+      transform: translateY(24px);
+    }
+    
+    .label {
+      cursor: default;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    
+    .close {
+      font-size: 19px;
+      text-align: center;
+      width: 18px;
+      cursor: pointer;
+      flex: 0 0 18px;
+      align-self: center;
+      font-family: monospace;
+      
+      &:hover {
+        color: @foreground;
+      }
+    }
+
+    &.newtab {
+      opacity: .25;
+      min-width: 30px;
+      max-width: 30px;
+      margin: 2px 0 4px 0;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+
+      .big-label {
+        font-size: 24px;
+        color: lighten(@foreground, 60%);
+        font-weight: bold;
+        text-align: center;
+      }
+    }    
+  }
+}

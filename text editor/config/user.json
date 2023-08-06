@@ -1,0 +1,76 @@
+{
+  "defaultTheme": "chrome", //This should be any of the supported Ace themes
+  // look for theme-*.js here: https://github.com/ajaxorg/ace-builds/tree/master/src-noconflict
+  
+  "uiTheme": "light", //dark, twilight, or light
+  "autoHideProject": false, //collapse the project view until you hover
+  "immersiveFullscreen": false, //hides menus/tabs in Chrome OS fullscreen mode
+  "highlightLine": false,
+  "hideGutter": false, //set to true to hide the line numbering
+
+  // editor options
+  "showWhitespace": false, //show whitespace characters (spaces, tabs, returns)
+  "showMargin": false,
+  "scrollPastEnd": true, //allow the editor to scroll past the end of the document
+  "trimTrailingWhitespace": true, //run "Trim Trailing Whitespace" on save
+  "trimEmptyLines": false, //should the trim whitespace command also truncate empty lines?
+
+  // syntax options
+  "indentation": 2, //indentation size
+  "useTabs": false, //will turn off Ace's setUseSoftTabs() option and use tab characters instead
+  "wordWrap": true,
+  "wrapLimit": false, //Set to the number of characters you want or false for full window
+  "lineEndings": "auto", //newline format - "windows", "unix", or "auto"
+
+  //only fixed-width fonts supported, for now
+  "fontFamily": "",
+  "fontSize": 13,
+  "lineHeight": 1,
+
+  //Web workers are used for code hinting in PHP, JavaScript, and JSON.
+  //We don't yet have a way to set the worker options, but you can disable it.
+  "useWorker": true,
+  //autocomplete triggers on Ctrl-Space
+  "autocomplete": true,
+  //autocomplete triggers automatically
+  "autocompleteLive": false,
+  //"Behaviors" are the auto-paired quotes and HTML tags in the editor
+  "disableBehaviors": false,
+
+  //By default, the palette searches the current file's text only unless you widen the scope.
+  //If you'd like it to search all open files by default, set this option to true.
+  "searchAllFiles": false,
+  //set the max search results that project wide search will return.
+  "maxSearchMatches": 500,
+
+  //set a regex to ignore in project view/search
+  "ignoreFiles": "node_modules",
+  //by default, Caret doesn't show hidden folders (i.e., .git) in its project view
+  "showHiddenDirectories": false,
+  //set this to enable autosave every X minutes
+  "autosaveInterval": 0,
+  "autosaveOnBlur": false,
+  //If the editor jumps to the top on focus change, set this:
+  "disableReload": false,
+  //Set this to stop the editor from restoring the last set of tabs it had open
+  "disableTabRestore": false,
+
+  //If you want to disable update checks at startup, change this
+  "promptForUpdates": true,
+  // options are "background", "launch", and "silent"
+  "updateNotifications": "background",
+
+
+  //Wildly eccentric? You might like Vim keybindings.
+  "emulateVim": false,
+  
+  //jsHint settings are applied on opening a JS file. You may need to restart Caret for changes to take effect.
+  "jsHint": {},
+
+  // You can set syntax options here. Not all options supported yet.
+  "syntaxSpecific": {
+    "python": {
+      "indentation": 4
+    }
+  }
+}
